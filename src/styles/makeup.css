@@ -1,0 +1,819 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Modal Styles */
+  .service-modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start with zero opacity */
+    transform: scale(0.9); /* Slightly smaller */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for smooth fade-in/fade-out and scaling */
+  }
+  
+  .service-modal.show {
+    display: flex; /* Make the modal visible */
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Normal size */
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Optional transition for modal content */
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    transition: transform 0.3s ease; /* Smooth transition on image zoom */
+  }
+  
+  .modal-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on image hover */
+  }
+  
+  /* Service Card Hover Effect */
+  .service-card {
+    cursor: pointer;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .service-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+  
+  .service-card h3 {
+    margin: 10px 0;
+  }
+  
+  /* Header Section */
+/* General styling for the header */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.header .logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header .logo span {
+    color: #ff6347;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-logo {
+    display: flex;
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center; /* Center align items */
+  }
+  
+  .logo {
+    height: 40px; /* Adjust size as needed */
+    width: auto;
+  }
+  
+  .studio-name {
+    font-size: .7rem; /* Adjust text size */
+    font-weight: lighter;
+    color: white;
+    margin-top: 0px; /* Add spacing between logo and text */
+  }  
+  
+
+.nav-links li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease, padding 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    color: #ff6347;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff6347;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 17px;
+    height: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Mobile Drawer Navigation */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;  /* Set width of the drawer */
+        height: 90vh;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        transform: translateX(0);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.0rem;
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-links a:hover {
+        background-color: #444;
+        color: #ff6347;
+    }
+
+    /* Overlay to close the menu */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+    }
+}
+
+/* Adding smooth scroll effect */
+html {
+    scroll-behavior: smooth;
+}
+
+  
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: slideBackground 25s infinite;
+     /* Add margin-top to avoid the navbar overlap */
+  }
+  
+  @keyframes slideBackground {
+    0% {
+      background-image: url('../../public/Z2.png');
+    }
+    33% {
+      background-image: url('../../public/Z3.jpg');
+    }
+    66% {
+      background-image: url('../../public/Z1.png');
+    }
+    100% {
+      background-image: url('../../public/Z2.png');
+    }
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  .hero-content h2 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-btn {
+    /* margin-top: 100px; */
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #ff4500;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 25px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .about-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+
+
+  
+/* Portfolio Section */
+/* Portfolio Section Styles */
+.portfolio {
+    padding: 10px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    overflow: hidden; /* Ensure the portfolio section doesn't overflow */
+    margin-top: 390px; /* Ensure space between services and portfolio sections */
+}
+
+.portfolio-heading{
+    margin-bottom: 10px;
+}
+
+.portfolio-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.portfolio-grid {
+    display: flex; /* Use flexbox to display items in a row */
+    gap: 20px; /* Space between images */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snapping behavior for smoother scrolling */
+    padding-bottom: 20px; /* Space for smooth scrolling */
+    justify-content: center; /* Center the items */
+}
+
+.portfolio-item {
+    flex: 0 0 auto; /* Prevent wrapping of items */
+    width: 250px; /* Set width for each item */
+    height: 250px; /* Set height for items */
+    overflow: hidden; /* Hide content that overflows */
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scale and shadow effects */
+    scroll-snap-align: center; /* Center each image when scrolling */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the entire item area */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+/* Hover Effect: Slight zoom and shadow */
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add a subtle shadow for depth */
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.2); /* Zoom in image on hover */
+}
+
+/* Mobile and Tablet View (Responsive to small screens) */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        flex-direction: row; /* Ensure the items are still in a row on small screens */
+        justify-content: flex-start; /* Align items to the left for better appearance */
+        gap: 15px; /* Slightly reduce the gap between items on mobile */
+    }
+
+    .portfolio-item {
+        width: 200px; /* Adjust width for smaller screens */
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Very small screens (portrait phones) */
+@media (max-width: 480px) {
+    .portfolio-item {
+        width: 150px; /* Further reduce width for very small screens */
+        height: 150px; /* Adjust height for small screens */
+    }
+    
+    .portfolio-grid {
+        gap: 10px; /* Even smaller gap between items */
+    }
+}
+
+ 
+  /* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .contact-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    appearance: none; /* Removes default browser styling */
+}
+
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  .contact-form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #ff6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.4);
+  }
+  
+  .form-group textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  .submit-btn {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ff4500;
+  }
+  
+  .form-status {
+    margin-top: 10px;
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      width: 90%;
+    }
+  
+    .contact h2 {
+      font-size: 2rem;
+    }
+  
+    .contact p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  
+ /* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 95vh;  /* Ensures footer takes up full screen height if needed */
+}
+
+footer .footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Ensures proper spacing */
+    padding-bottom: 30px;  /* Prevents bottom content from getting cut */
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .footer-logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+footer .footer-logo h1 span {
+    color: #fff;
+}
+
+footer .footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  /* Ensures items wrap on small screens */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+footer .footer-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer .footer-nav a:hover {
+    color: #ff6347;
+}
+
+footer .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+footer .footer-socials a {
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+footer .footer-socials a:hover {
+    color: #ff6347;
+}
+
+footer .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 20px;  /* Adds extra space at the bottom */
+}
+
+footer .footer-bottom a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+footer .footer-bottom a:hover {
+    color: white;
+}
+
+/* 📱 Mobile Responsive Fix */
+@media (max-width: 768px) {
+    footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer .footer-socials {
+        gap: 10px;
+    }
+
+    footer .footer-bottom {
+        padding-bottom: 40px; /* Extra padding for smaller screens */
+    }
+}
+
+/* services section */
+/* Services Heading Styles */
+.services h2 {
+    text-align: center;  /* Center the heading */
+    margin-top: 150px;    /* Add margin to give space from the top */
+    font-size: 2rem;
+    color: #333;  /* Ensure the text color stands out */
+  }
+
+.serv-heading{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+  
+  /* Service Cards Container */
+  .service-cards {
+    display: flex;
+    justify-content: space-between;  /* Distribute space between cards */
+    gap: 20px;  /* Add space between cards */
+    flex-wrap: wrap;  /* Ensure cards wrap on smaller screens */
+    margin-top: 40px;
+    padding: 0 20px;  /* Padding for better spacing */
+  }
+  
+  /* Service Card Styles */
+  .service-card {
+    flex: 1 1 calc(33.33% - 20px);  /* Three cards per row on large screens */
+    max-width: 100%;  /* Prevent overflow */
+    perspective: 1000px;  /* 3D effect */
+    margin-bottom: 30px;  /* Add margin at the bottom for spacing */
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;  /* Smooth transition for flipping */
+    position: relative;
+    margin-left: 10px;  /* Ensure left margin for spacing */
+  }
+  
+  /* Card Inner Styles */
+  .service-card .card-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+  }
+  
+  /* Front of the Card */
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;  /* Hide the back content when flipped */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* padding: 20px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Add subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition on hover */
+  }
+  
+  /* Front Content Styling */
+  .card-front {
+    background-color: #fff;
+  }
+  
+  .card-front img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;  /* Smooth zoom-in effect on hover */
+  }
+  
+  .card-front img:hover {
+    transform: scale(1.05);  /* Zoom in on hover */
+  }
+  
+  .card-front h3 {
+    margin-top:380px;
+    font-size: 1.3rem;
+    color: #333;
+  }
+  
+  .card-front p {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  /* Back of the Card (Flipped Side) */
+  .card-back {
+    background-color: #f9f9f9;  /* Light background color for back */
+    transform: rotateY(180deg);
+    padding: 35px;
+    text-align: center;
+    margin-top: 140px;
+  }
+  
+  .card-back h3 {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .card-back p {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  /* Inquire Now Button */
+  .inquiry-btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .inquiry-btn:hover {
+    background-color: #ff4500;  /* Darker shade on hover */
+  }
+  
+  .inquiry-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.5);  /* Focus state for accessibility */
+  }
+  
+  /* Hover and Flip Effect */
+  .service-card:hover .card-inner {
+    transform: rotateY(180deg);  /* Flip the card when hovered */
+  }
+  
+  /* For smaller screens (Responsive) */
+  @media (max-width: 1024px) {
+    .service-card {
+      flex: 1 1 calc(50% - 20px);  /* Two cards per row on mid-sized screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-cards {
+      justify-content: space-evenly;  /* Ensure even spacing between cards */
+      padding: 0 10px;  /* Adjust padding on mobile */
+      gap: 20px;  /* Ensure gap between cards */
+    }
+  
+    .service-card {
+      flex: 1 1 calc(45% - 20px);  /* Two cards per row with a gap */
+      margin-left: 0;  /* Ensure no left margin on small screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-cards {
+      flex-direction: column;  /* Stack cards vertically */
+      align-items: center;  /* Center align */
+      gap: 400px;  /* Ensure space between cards */
+    }
+  
+    .service-card {
+      width: 90%;  /* Adjust width for better layout */
+      max-width: 350px;  /* Prevent cards from being too wide */
+      margin-left: 0;  /* Remove left margin */
+    }
+  }
+  
+  
