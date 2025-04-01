@@ -1,11 +1,11 @@
-import React, { useState } from 'react';  // Ensure path is correct for your CSS file
+import React, { useState } from 'react';
 
 const Services = () => {
   const [flippedCard, setFlippedCard] = useState(null);
 
   const flipCard = (card) => {
     if (flippedCard === card) {
-      setFlippedCard(null);  // Unflip the card if the same one is clicked again
+      setFlippedCard(null); 
     } else {
       setFlippedCard(card);
     }
@@ -33,8 +33,8 @@ const Services = () => {
                 <button
                   className="inquiry-btn"
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent the flip when button is clicked
-                    window.location.href = '#contact'; // Redirect to the contact section
+                    e.stopPropagation(); 
+                    window.location.href = '#contact';
                   }}
                 >
                   Inquire Now
@@ -60,8 +60,8 @@ const Services = () => {
                 <button
                   className="inquiry-btn"
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent the flip when button is clicked
-                    window.location.href = '#contact'; // Redirect to the contact section
+                    e.stopPropagation(); 
+                    window.location.href = '#contact';
                   }}
                 >
                   Inquire Now
@@ -87,8 +87,8 @@ const Services = () => {
                 <button
                   className="inquiry-btn"
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent the flip when button is clicked
-                    window.location.href = '#contact'; // Redirect to the contact section
+                    e.stopPropagation(); 
+                    window.location.href = '#contact'; 
                   }}
                 >
                   Inquire Now
