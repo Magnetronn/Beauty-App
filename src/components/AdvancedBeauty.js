@@ -4,10 +4,10 @@ import "../styles/ServiceDetail.css";
 import Footer from "./Footer";
 
 const beautyServices = [
-  { name: "Laser Hair Removal", image: "A2.jpg", description: "Painless and permanent hair removal treatment." },
-  { name: "Skin Whitening", image: "/images/skin-whitening.jpg", description: "Advanced skin brightening treatments for an even tone." },
-  { name: "Acne Treatment", image: "/images/acne-treatment.jpg", description: "Effective solutions for acne and blemish-free skin." },
-  { name: "Chemical Peels", image: "/images/chemical-peels.jpg", description: "Skin rejuvenation and exfoliation using chemical peels." },
+  { name: "Laser Hair Removal", image: "/laserHair.jpeg", description: "Painless and permanent hair removal treatment." },
+  { name: "Skin Whitening", image: "/sWhite.jpg", description: "Advanced skin brightening treatments for an even tone." },
+  { name: "Acne Treatment", image: "/AcneTreat.jpg", description: "Effective solutions for acne and blemish-free skin." },
+  { name: "Chemical Peels", image: "/chemPeals.jpg", description: "Skin rejuvenation and exfoliation using chemical peels." },
 ];
 
 const AdvancedBeauty = () => {
@@ -27,7 +27,10 @@ const AdvancedBeauty = () => {
           </div>
         ))}
       </div>
-      <Link to="/services" className="back-button">Back to Services</Link>
+      <div className="button-container">
+                <Link to="/contact" className="custom-button enquiry-button">📩 Enquiry Services</Link>
+                <Link to="/services" className="custom-button back-button">⬅ Back to All Services</Link>
+    </div>
     </section>
     <Footer />
     </>

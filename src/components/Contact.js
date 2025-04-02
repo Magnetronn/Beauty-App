@@ -90,7 +90,7 @@ const Contact = () => {
 
           {formStatus && <div className="form-status">{formStatus}</div>}
 
-          <button type="submit" className="submit-btn">Send Inquiry</button>
+          <button type="submit" className="submit-btn">Send Enquiry</button>
         </form>
       </div>
     </section>

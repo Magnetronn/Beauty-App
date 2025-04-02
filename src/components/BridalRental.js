@@ -26,7 +26,10 @@ const BridalRental = () => {
           </div>
         ))}
       </div>
-      <Link to="/services" className="back-button">Back to Services</Link>
+      <div className="button-container">
+                <Link to="/contact" className="custom-button enquiry-button">📩 Enquiry Services</Link>
+                <Link to="/services" className="custom-button back-button">⬅ Back to All Services</Link>
+        </div>
     </section>
     <Footer />
     </>

@@ -1,0 +1,113 @@
+.our-work-page {
+    padding: 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  
+  .page-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .work-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .work-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .work-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .work-image:hover {
+    transform: scale(1.1);
+  }
+  
+ /* Lightbox styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Adjust lightbox for all screen sizes */
+.lightbox-content {
+    position: relative;
+    width: 90%; /* Slightly wider for better responsiveness */
+    max-width: 60vw; /* Adjust max size for large screens */
+    max-height: 80vh; /* Ensures it doesn't overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ensure image scales well */
+  .lightbox-image {
+    max-width: 95%;  /* Slightly reduced to prevent overflow */
+    max-height: 85vh; /* Ensures image fits within the screen */
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  @media (min-width: 1024px) {
+    .lightbox-content {
+      max-width: 70vw;
+      max-height: 70vh;
+      margin-top: 60px; /* Adds margin at the top */
+    }
+  }  
+  
+  @media (max-width: 768px) {
+    .lightbox-content {
+      max-width: 80vw; /* Slightly smaller width for better fit */
+      max-height: 70vh; /* Reducing height to prevent overflow */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .lightbox-image {
+      max-width: 70%; /* Making image slightly smaller */
+      max-height: 65vh; /* Adjusting height */
+    }
+  }
+  
+  
+  

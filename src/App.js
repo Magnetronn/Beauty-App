@@ -15,6 +15,9 @@ import SemiPermanentMakeup from "./components/SemiPermanentMakeup";
 import BridalRental from "./components/BridalRental";
 
 import "./styles/makeup.css";
+import AboutPage from "./components/AboutPage";
+import OurWorkPage from "./components/OurWorkPage";
+import ContactUs from "./components/ContactUs";
 
 const App = () => {
   return (
@@ -33,6 +36,9 @@ const App = () => {
           </>
         } />
 
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/portfolio" element={<OurWorkPage />} />
+        <Route path="/about" element={<AboutPage />} />
         {/* Complete Services Page */}
         <Route path="/services" element={<CompleteServices />} />
 

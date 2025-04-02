@@ -1,16 +1,21 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 // import "../styles/Header.css";
 
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => setIsMobile(!isMobile);
   const closeMobileMenu = () => setIsMobile(false);
+  const handleLogoClick = () => {
+    closeMobileMenu();
+    navigate("/"); // Redirects to home page on click
+  };
 
   return (
     <header className="header">
-      <div className="navbar-logo">
+      <div className="navbar-logo" onClick={handleLogoClick} style={{ cursor: "pointer" }}>
         <img src="/logos.png" alt="Asthatic Palace Logo" className="logo" />
         <h1 className="studio-name">Asthatic Palace</h1>
       </div>
