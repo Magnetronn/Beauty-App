@@ -16,8 +16,8 @@ function Header() {
   return (
     <header className="header">
       <div className="navbar-logo" onClick={handleLogoClick} style={{ cursor: "pointer" }}>
-        <img src="/logos.png" alt="Asthatic Palace Logo" className="logo" />
-        <h1 className="studio-name">Asthatic Palace</h1>
+        <img src="/logos.png" alt="Aesthetic Palace Logo" className="logo" />
+        <h1 className="studio-name">Aesthetic Palace</h1>
       </div>
 
       <div className="menu-icon" onClick={toggleMobileMenu}>

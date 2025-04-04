@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div className="footer-container">
         <div className="footer-logo">
-          <h1><span>Asthatic</span> Palace</h1>
+          <h1><span>Aesthetic</span> Palace</h1>
         </div>
         <div className="footer-nav">
           <a href="#">Home</a>
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 The Asthatic Palace. All rights reserved.</p>
+          <p>&copy; 2025 The Aesthetic Palace. All rights reserved.</p>
           <p>Professional Makeup Artist & International Certified Clinical Cosmetologist <span style={{ color: '#ff6347' }}>❤️</span> by Ankita Singh<span style={{ color: '#ff6347' }}> (Shalu)</span> </p>
           <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms">Terms of Service</a>
         </div>

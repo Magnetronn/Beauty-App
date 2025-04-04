@@ -15,10 +15,10 @@ const AboutPage = () => {
           <div className="about-card">
             <h2 className="about-heading">About Us</h2>
             <p>
-              Welcome to <strong>Asthatic Palace</strong>, your premier beauty destination. We specialize in professional makeup, hair services, advanced beauty treatments, and bridal rentals. Our expert team is dedicated to making you look and feel your best for any occasion.
+              Welcome to <strong>Aesthetic Palace</strong>, your premier beauty destination. We specialize in professional makeup, hair services, advanced beauty treatments, and bridal rentals. Our expert team is dedicated to making you look and feel your best for any occasion.
             </p>
             <p>
-              At <strong>Asthatic Palace</strong>, we believe that beauty is an art. With years of experience in the industry, we offer high-quality services tailored to your needs. Whether it's a wedding, party, or a personal beauty transformation, we ensure you receive the best care. Our team stays updated with the latest beauty trends and techniques to provide you with the most innovative and effective treatments.
+              At <strong>Aesthetic Palace</strong>, we believe that beauty is an art. With years of experience in the industry, we offer high-quality services tailored to your needs. Whether it's a wedding, party, or a personal beauty transformation, we ensure you receive the best care. Our team stays updated with the latest beauty trends and techniques to provide you with the most innovative and effective treatments.
             </p>
             <p>
               We take pride in using <strong>premium products</strong> and personalized approaches to meet the unique beauty requirements of each client. Our goal is to enhance your natural beauty while providing a <strong>relaxing and luxurious experience</strong>, you can checkout our below services.
