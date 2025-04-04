@@ -4,11 +4,11 @@ import "../styles/ServiceDetail.css";
 import Footer from "./Footer";
 
 const makeupServices = [
-  { name: "HD Makeup", image: "/Hd.jpg", description: "Flawless high-definition makeup for a radiant look." },
-  { name: "Airbrush Makeup", image: "/airBrush.jpg", description: "Long-lasting, lightweight airbrush makeup for special events." },
-  { name: "Nude Makeup", image: "/nude.jpg", description: "Minimalist makeup to enhance natural beauty." },
-  { name: "3D Makeup", image: "/3D.jpg", description: "Three-dimensional makeup for depth and vibrancy." },
-  { name: "Smokey Makeup", image: "/smokey.jpg", description: "Bold and dramatic smokey eye makeup." },
+  { name: "HD Makeup", image: "/Makeup/Hd.jpg", description: "Flawless high-definition makeup for a radiant look." },
+  { name: "Airbrush Makeup", image: "/Makeup/airBrush.jpg", description: "Long-lasting, lightweight airbrush makeup for special events." },
+  { name: "Nude Makeup", image: "/Makeup/nude.jpg", description: "Minimalist makeup to enhance natural beauty." },
+  { name: "3D Makeup", image: "/Makeup/3D.jpg", description: "Three-dimensional makeup for depth and vibrancy." },
+  { name: "Smokey Makeup", image: "/Makeup/smokey.jpg", description: "Bold and dramatic smokey eye makeup." },
 ];
 
 const Makeup = () => {

@@ -4,10 +4,10 @@ import "../styles/ServiceDetail.css";
 import Footer from "./Footer";
 
 const beautyServices = [
-  { name: "Laser Hair Removal", image: "/laserHair.jpeg", description: "Painless and permanent hair removal treatment." },
-  { name: "Skin Whitening", image: "/sWhite.jpg", description: "Advanced skin brightening treatments for an even tone." },
-  { name: "Acne Treatment", image: "/AcneTreat.jpg", description: "Effective solutions for acne and blemish-free skin." },
-  { name: "Chemical Peels", image: "/chemPeals.jpg", description: "Skin rejuvenation and exfoliation using chemical peels." },
+  { name: "Laser Hair Removal", image: "/AdvBeautyTreat/laserHair.jpeg", description: "Painless and permanent hair removal treatment." },
+  { name: "Skin Whitening", image: "/AdvBeautyTreat/sWhite.jpg", description: "Advanced skin brightening treatments for an even tone." },
+  { name: "Acne Treatment", image: "/AdvBeautyTreat/AcneTreat.jpg", description: "Effective solutions for acne and blemish-free skin." },
+  { name: "Chemical Peels", image: "/AdvBeautyTreat/chemPeals.jpg", description: "Skin rejuvenation and exfoliation using chemical peels." },
 ];
 
 const AdvancedBeauty = () => {

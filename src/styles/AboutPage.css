@@ -18,7 +18,7 @@
   .about-heading {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #333;
+    color: #d63384;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -57,32 +57,51 @@
     color: #333;
   }
   
-  .services-cards-container {
+  /* Services Container */
+.about-services-cards-container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
     margin-top: 20px;
-  }
-  
-  .service-card {
+}
+
+.about-service-card {
     background: #fff;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 280px;
+    width: 220px;  /* Reduced size */
+    min-height: 180px;
     text-align: center;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #444;
-  }
-  
-  .service-card p {
-    margin: 0;
-  }
-  
-  .services-cards-container .service-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     text-decoration: none; /* Remove underline */
-    cursor: pointer; /* Ensure it still looks clickable */
-  }
-  
+    cursor: pointer; /* Ensure it looks clickable */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit; /* Prevents link color */
+}
+
+.about-service-card h4, .about-service-card p {
+    margin: 6px 0;
+    color: #444444;  /* Text remains normal */
+    font-weight: normal;
+}
+
+.about-service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Icons Styling */
+.about-service-icon {
+    font-size: 2rem;
+    color: #d63384; /* Soft pink color */
+    margin-bottom: 5px;
+}
+
+/* Prevents blue link color */
+.about-service-card:visited, .about-service-card:active {
+    color: inherit;
+}

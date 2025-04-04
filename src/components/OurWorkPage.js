@@ -1,42 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/OurWorkPage.css";
 import Footer from "./Footer";
 
 const workData = [
   {
     title: "Bridal Makeup",
-    images: ["/M1.jpg", "/M2.jpg", "/M3.jpg"],
+    images: ["/M1.jpg", "/G1.jpeg", "/S3.jpg"],
     description: "Elegant bridal makeup with a flawless finish for your special day.",
   },
   {
     title: "Hair Styling",
-    images: ["/images/hair1.jpg", "/images/hair2.jpg", "/images/hair3.jpg"],
+    images: ["/A3.jpg", "/A2.jpg", "/A4.jpg"],
     description: "Creative hair styling, from curls to updos, to enhance your beauty.",
   },
   {
     title: "Advanced Beauty Treatment",
-    images: ["/images/beauty1.jpg", "/images/beauty2.jpg", "/images/beauty3.jpg"],
+    images: ["/AdvBeautyTreat/laserHair.jpeg", "/AdvBeautyTreat/sWhite.jpg", "/AdvBeautyTreat/chemPeals.jpg"],
     description: "Premium skin care and treatments for a youthful and glowing look.",
   },
   {
     title: "Semi-Permanent Makeup",
-    images: ["/images/semi1.jpg", "/images/semi2.jpg", "/images/semi3.jpg"],
+    images: ["/SemiPermaMakeup/AdvHydra.jpg", "/SemiPermaMakeup/Lpig.jpg", "/SemiPermaMakeup/BBglow.jpg"],
     description: "Eyebrow defining, lip pigmentation, and BB glow treatments for long-lasting beauty.",
   },
   {
     title: "Hair Treatments",
-    images: ["/images/hairtreat1.jpg", "/images/hairtreat2.jpg", "/images/hairtreat3.jpg"],
+    images: ["/HairService/AntiHair1.jpg", "/HairService/HBotex.webp", "/HairService/Ktreat.jpg"],
     description: "Hair Botox, Keratin, and Permanent Straightening treatments for smooth, healthy hair.",
   },
   {
     title: "Bridal & Non-Bridal Rentals",
-    images: ["/images/rent1.jpg", "/images/rent2.jpg", "/images/rent3.jpg"],
+    images: ["/BrideRental/Brent.jpg", "/BrideRental/Bjwel.jpg", "/BrideRental/NonB.webp"],
     description: "Lehenga & jewelry available on rent for your special occasions.",
   },
 ];
 
 const OurWorkPage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  useEffect(() => {
+          window.scrollTo(0, 0);
+        }, []);
 
   return (
     <>

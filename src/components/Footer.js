@@ -8,7 +8,7 @@ const Footer = () => {
           <h1><span>Asthatic</span> Palace</h1>
         </div>
         <div className="footer-nav">
-          <a href="#home">Home</a>
+          <a href="#">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#contact">Contact</a>

@@ -4,10 +4,10 @@ import "../styles/ServiceDetail.css";
 import Footer from "./Footer";
 
 const hairServices = [
-  { name: "Hair Botox", image: "Z1.png", description: "Strengthen and repair damaged hair with Botox treatment." },
-  { name: "Permanent Straightening", image: "/images/straightening.jpg", description: "Long-lasting straight hair with professional techniques." },
-  { name: "Keratin Treatment", image: "/images/keratin.jpg", description: "Frizz-free and silky-smooth hair with keratin therapy." },
-  { name: "Anti Hair Fall Treatment", image: "/images/anti-hairfall.jpg", description: "Prevent hair fall with specialized scalp treatments." },
+  { name: "Hair Botox", image: "/HairService/HBotex.webp", description: "Strengthen and repair damaged hair with Botox treatment." },
+  { name: "Permanent Straightening", image: "/HairService/Hstrate2.jpg", description: "Long-lasting straight hair with professional techniques." },
+  { name: "Keratin Treatment", image: "/HairService/Ktreat.jpg", description: "Frizz-free and silky-smooth hair with keratin therapy." },
+  { name: "Anti Hair Fall Treatment", image: "/HairService/AntiHair1.jpg", description: "Prevent hair fall with specialized scalp treatments." },
 ];
 
 const HairService = () => {

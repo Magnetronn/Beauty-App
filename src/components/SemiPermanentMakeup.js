@@ -4,10 +4,10 @@ import "../styles/ServiceDetail.css";
 import Footer from "./Footer";
 
 const semiPermanentMakeupServices = [
-  { name: "Eyebrow Defining", image: "M1.jpg", description: "Enhance your eyebrows with precision and natural-looking definition." },
-  { name: "Lip Pigmentation", image: "/images/lip-pigmentation.jpg", description: "Get naturally tinted lips with semi-permanent pigmentation." },
-  { name: "BB Glow", image: "/images/bb-glow.jpg", description: "Achieve a radiant, even skin tone with our BB Glow treatment." },
-  { name: "Advanced Hydra Facial", image: "/images/hydra-facial.jpg", description: "Deep cleansing and hydration for healthy, glowing skin." },
+  { name: "Eyebrow Defining", image: "/SemiPermaMakeup/Edif.jpg", description: "Enhance your eyebrows with precision and natural-looking definition." },
+  { name: "Lip Pigmentation", image: "/SemiPermaMakeup/Lpig.jpg", description: "Get naturally tinted lips with semi-permanent pigmentation." },
+  { name: "BB Glow", image: "/SemiPermaMakeup/BBglow.jpg", description: "Achieve a radiant, even skin tone with our BB Glow treatment." },
+  { name: "Advanced Hydra Facial", image: "/SemiPermaMakeup/AdvHydra.jpg", description: "Deep cleansing and hydration for healthy, glowing skin." },
 ];
 
 const SemiPermanentMakeup = () => {

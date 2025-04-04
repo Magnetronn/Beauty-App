@@ -14,7 +14,7 @@ const Services = () => {
   return (
     <section className="services" id="services">
       <div className="services-container">
-        <div className='serv-heading'><h1>My Services</h1></div>
+        <div className='serv-heading'><h1>Services</h1></div>
         <div className="service-cards">
           {/* Bridal Makeup Card */}
           <div
@@ -25,11 +25,11 @@ const Services = () => {
               <div className="card-front">
                 <h3>Bridal Makeup</h3>
                 <img src="/M3.jpg" alt="Bridal Makeup" />
-                <p>Elegant bridal makeup to make you feel beautiful on your special day.</p>
+                <p>Elegant bridal makeup to make you feel beautiful and look gorgeous on your special day.</p>
               </div>
               <div className="card-back">
                 <h3>Bridal Makeup</h3>
-                <p>Elegant bridal makeup to make you feel beautiful on your special day.</p>
+                <p>Elegant bridal makeup to make you feel beautiful and look gorgeous on your special day.</p>
                 <button
                   className="inquiry-btn"
                   onClick={(e) => {
@@ -50,13 +50,13 @@ const Services = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <h3>Photoshoot Makeup</h3>
-                <img src="p3.jpeg" alt="Photoshoot Makeup" />
-                <p>Expert makeup for photoshoots to highlight your best features.</p>
+                <h3>Advanced Beauty Treatment</h3>
+                <img src="/AllServices/AdvSkinT.jpg" alt="Advanced Beauty Treatment" />
+                <p>we also provide permanent hair removal and Advanced skin brightening treatments and many more.</p>
               </div>
               <div className="card-back">
-                <h3>Photoshoot Makeup</h3>
-                <p>Expert makeup for photoshoots to highlight your best features.</p>
+                <h3>Advanced Beauty Treatment</h3>
+                <p>we also provide permanent hair removal and Advanced skin brightening treatments and many more.</p>
                 <button
                   className="inquiry-btn"
                   onClick={(e) => {
@@ -77,13 +77,13 @@ const Services = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <h3>Party Makeup</h3>
-                <img src="s1.jpg" alt="Party Makeup" />
-                <p>Perfect makeup for any party or event, designed to last all day.</p>
+                <h3>Bridal Rental</h3>
+                <img src="/BrideRental/Bjwel.jpg" alt="Bridal Rental" />
+                <p>Rent beautiful bridal lehengas for your special day and we are also provide premium jewelry sets for weddings and special events.</p>
               </div>
               <div className="card-back">
-                <h3>Party Makeup</h3>
-                <p>Perfect makeup for any party or event, designed to last all day.</p>
+                <h3>Bridal Rental</h3>
+                <p>Rent beautiful bridal lehengas for your special day and we are also provide premium jewelry sets for weddings and special events.</p>
                 <button
                   className="inquiry-btn"
                   onClick={(e) => {

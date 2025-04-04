@@ -4,9 +4,9 @@ import "../styles/ServiceDetail.css";
 import Footer from "./Footer";
 
 const bridalRentalOptions = [
-  { name: "Bridal Lehenga Rental", image: "M2.jpg", description: "Rent beautiful bridal lehengas for your special day." },
-  { name: "Non-Bridal Lehenga Rental", image: "/images/non-bridal-lehenga.jpg", description: "Stylish lehengas available for every occasion." },
-  { name: "Jewelry Rental", image: "/images/jewelry-rental.jpg", description: "Get premium jewelry sets for weddings and special events." },
+  { name: "Bridal Lehenga Rental", image: "/BrideRental/Brent.jpg", description: "Rent beautiful bridal lehengas for your special day." },
+  { name: "Non-Bridal Lehenga Rental", image: "/BrideRental/NonB.webp", description: "Stylish lehengas available for every occasion." },
+  { name: "Jewelry Rental", image: "/BrideRental/Bjwel.jpg", description: "Get premium jewelry sets for weddings and special events." },
 ];
 
 const BridalRental = () => {
