@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT || 10000;
 
-// // Middleware
+// Middleware
 // app.use(cors({
 //   origin: 'https://aestheticpalace.vercel.app/'
 // }));
