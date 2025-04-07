@@ -5,7 +5,7 @@ import Footer from "./Footer";
 const workData = [
   {
     title: "Bridal Makeup",
-    images: ["/M1.jpg", "/G1.jpeg", "/S3.jpg"],
+    images: ["/M1.jpg", "/G1.JPEG", "/S3.JPG"],
     description: "Elegant bridal makeup with a flawless finish for your special day.",
   },
   {
