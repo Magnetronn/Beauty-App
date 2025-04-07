@@ -4,14 +4,32 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
-// Middleware
+// // Middleware
 // app.use(cors({
 //   origin: 'https://aestheticpalace.vercel.app/'
 // }));
 
 app.use(express.json());
+
+app.use(cors({
+  origin: 'https://aestheticpalace.vercel.app/', // ✅ your deployed frontend URL (no trailing slash)
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
+
+
+app.use(express.static(path.join(__dirname, "build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
+fetch('https://beauty-app-astk.onrender.com/send-email', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(data)
+})
 
 // Verify .env variables are loaded
 if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
