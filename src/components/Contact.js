@@ -26,7 +26,7 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch('https://beauty-app-astk.onrender.com/send-email', {
+      const response = await fetch('https://aesthetic-palace.onrender.com/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
