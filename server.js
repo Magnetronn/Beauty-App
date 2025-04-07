@@ -6,24 +6,16 @@ const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT;
 
-// // Middleware
-// app.use(cors({
-//   origin: 'https://aestheticpalace.vercel.app/'
-// }));
-
-app.use(express.json());
-
 app.use(cors({
-  origin: 'https://aestheticpalace.vercel.app/', // ✅ your deployed frontend URL (no trailing slash)
-  methods: ['GET', 'POST'],
-  credentials: true
+  origin: 'https://aestheticpalace.vercel.app',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true,
 }));
 
+app.options('*', cors());
 
-app.use(express.static(path.join(__dirname, "build")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
+app.use(express.json());
 
 fetch('https://beauty-app-astk.onrender.com/send-email', {
   method: 'POST',
