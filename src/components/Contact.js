@@ -48,7 +48,9 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="contact-container">
         <h2>Contact Us</h2>
-        <p>Have questions about our beauty services? Reach out and let us know how we can help!</p>
+        <p>
+          Have questions about our beauty services? Reach out on 📞 <span style={{ color: '#ff6347' }}>9170094674</span> / 📧 <span style={{ color: '#ff6347' }}>aestheticpalace03@gmail.com</span> and let us know how we can help!
+       </p>
 
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
