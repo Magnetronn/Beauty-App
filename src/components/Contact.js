@@ -26,7 +26,7 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch('https://aesthetic-palace.onrender.com/send-email', {
+      const response = await fetch('https://aestheticpalace.vercel.app/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
