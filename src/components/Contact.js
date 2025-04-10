@@ -65,7 +65,7 @@ const Contact = () => {
 
           <div className="form-group">
             <label htmlFor="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your phone number" required />
+            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your phone number" pattern="[0-9]{10}" maxLength="10" required />
           </div>
 
           <div className="form-group">

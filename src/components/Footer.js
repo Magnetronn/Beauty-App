@@ -31,7 +31,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p>&copy; 2025 The Aesthetic Palace. All rights reserved.</p>
-          <p>Professional Makeup Artist & International Certified Clinical Cosmetologist <span style={{ color: '#ff6347' }}>❤️</span> by Ankita Singh<span style={{ color: '#ff6347' }}> (Shalu)</span> </p>
+          <p>Professional Makeup Artist & International Certified Clinical Cosmetologist <span style={{ color: '#ff6347' }}>❤️</span> by Anita Singh<span style={{ color: '#ff6347' }}> (Shalu)</span> </p>
           <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms">Terms of Service</a>
         </div>
       </div>
