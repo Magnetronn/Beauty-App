@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const [flippedCard, setFlippedCard] = useState(null);
@@ -14,7 +15,11 @@ const Services = () => {
   return (
     <section className="services" id="services">
       <div className="services-container">
-        <div className='serv-heading'><h1>Services</h1></div>
+      <div className='serv-heading'>
+          <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <h2>Services</h2>
+          </Link>
+          </div>
         <div className="service-cards">
           {/* Bridal Makeup Card */}
           <div

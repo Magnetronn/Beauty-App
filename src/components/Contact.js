@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -47,7 +48,9 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
-        <h2>Contact Us</h2>
+      <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <h2>Contact Us</h2>
+        </Link>
         <p>
           Have questions about our beauty services? Reach out on 📞 <span style={{ color: '#ff6347' }}>9170094674</span> / 📧 <span style={{ color: '#ff6347' }}>aestheticpalace03@gmail.com</span> and let us know how we can help!
        </p>

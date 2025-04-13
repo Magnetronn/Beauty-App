@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   const portfolioItems = [
@@ -16,7 +17,11 @@ const Portfolio = () => {
   return (
     <section className="portfolio" id="portfolio">
       <div className="portfolio-container">
-        <div className='portfolio-heading'><h2>Our Works</h2></div>
+      <div className='portfolio-heading'>
+        <Link to="/portfolio" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <h2>Our Works</h2>
+        </Link>
+      </div>
         <div className="portfolio-grid">
           {portfolioItems.map(item => (
             <div key={item.id} className="portfolio-item">
