@@ -19,6 +19,7 @@ const Services = () => {
           <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <h2>Services</h2>
           </Link>
+          <div className="separator">✦ ✧ ✦</div>
           </div>
         <div className="service-cards">
           {/* Bridal Makeup Card */}

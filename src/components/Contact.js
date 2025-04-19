@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import GoogleMapEmbed from './GoogleMapEmbed';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -98,6 +99,9 @@ const Contact = () => {
           <button type="submit" className="submit-btn">Send Enquiry</button>
         </form>
       </div>
+      <h1>Our Location</h1>
+      <div className="separator">✦ ✧ ✦</div>
+      <GoogleMapEmbed/>
     </section>
   );
 };
